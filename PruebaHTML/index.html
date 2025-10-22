@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descripción de la empresa">
+  <meta name="keywords" content="palabras clave para la búsqueda">
+  <meta name="author" content="Catalina Barber">
+  <meta name="robots" content="index, follow">
+
+  <title>Tu Empresa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="#" class="logo">TechStore</a>
+    <ul>
+      <li><a href="#" class="nav-link active-page" data-page="home">Inicio</a></li>
+      <li><a href="#" class="nav-link" data-page="products">Productos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Página de Inicio -->
+  <section id="home-page" class="page-content">
+    <div class="hero">
+      <h1>Bienvenido a TechStore</h1>
+      <p>Descubre los mejores productos de tecnología. Calidad, innovación y los mejores precios en un solo lugar.</p>
+      <a href="#" class="cta-button" data-page="products">Ver Productos</a>
+    </div>
+
+    <div class="features">
+      <article class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Envío Gratis</h3>
+        <p>En compras mayores a $50</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Pago Seguro</h3>
+        <p>Protección en todas tus transacciones</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Entrega Rápida</h3>
+        <p>Recibe tus productos en 24-48 horas</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Soporte 24/7</h3>
+        <p>Estamos aquí para ayudarte</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Página de Productos -->
+  <section id="products-page" class="page-content hidden">
+    <h1>Nuestros Productos</h1>
+
+    <div class="filter-section">
+      <h3>Filtrar por categoría:</h3>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Todos</button>
+        <button class="filter-btn" data-category="laptops">Laptops</button>
+        <button class="filter-btn" data-category="smartphones">Smartphones</button>
+        <button class="filter-btn" data-category="audifonos">Audífonos</button>
+      </div>
+    </div>
+
+    <div class="products-grid" id="products-container">
+      <!-- Producto 1 -->
+      <article class="product-card" data-category="laptops">
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Laptop Pro 15" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Laptops</span>
+          <h3 class="product-title">Laptop Pro 15"</h3>
+          <p class="product-description">Potente laptop con procesador de última generación y 16GB RAM.</p>
+          <a href="https://example.com/laptop-pro-15" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="product-card" data-category="smartphones">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Smartphone X12" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Smartphones</span>
+          <h3 class="product-title">Smartphone X12</h3>
+          <p class="product-description">Cámara de 108MP y pantalla AMOLED de 6.7 pulgadas.</p>
+          <a href="https://example.com/smartphone-x12" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="product-card" data-category="audifonos">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Audífonos Wireless" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Audífonos</span>
+          <h3 class="product-title">Audífonos Wireless</h3>
+          <p class="product-description">Cancelación de ruido activa y 30 horas de batería.</p>
+          <a href="https://example.com/audifonos-wireless" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+
+      <!-- Producto 4 -->
+      <article class="product-card" data-category="laptops">
+        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop" alt="Laptop Ultra" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Laptops</span>
+          <h3 class="product-title">Laptop Ultra</h3>
+          <p class="product-description">Diseño ultradelgado con pantalla 4K y SSD de 512GB.</p>
+          <a href="https://example.com/laptop-ultra" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+
+      <!-- Producto 5 -->
+      <article class="product-card" data-category="smartphones">
+        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=300&fit=crop" alt="Smartphone Mini" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Smartphones</span>
+          <h3 class="product-title">Smartphone Mini</h3>
+          <p class="product-description">Compacto pero poderoso, perfecto para llevar a todas partes.</p>
+          <a href="https://example.com/smartphone-mini" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+
+      <!-- Producto 6 -->
+      <article class="product-card" data-category="audifonos">
+        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop" alt="Audífonos Sport" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Audífonos</span>
+          <h3 class="product-title">Audífonos Sport</h3>
+          <p class="product-description">Resistentes al agua y diseño ergonómico para deportistas.</p>
+          <a href="https://example.com/audifonos-sport" class="product-link" target="_blank">Ver detalles →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+
+</html>
