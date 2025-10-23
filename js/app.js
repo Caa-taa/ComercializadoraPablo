@@ -41,9 +41,10 @@ filterButtons.forEach(button => {
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
-    // Filtrar productos
+    // Filtrar productos (acepta múltiples categorías)
     productCards.forEach(card => {
-      if (category === 'all' || card.getAttribute('data-category') === category) {
+      const categories = card.getAttribute('data-category').split(" ");
+      if (category === 'all' || categories.includes(category)) {
         card.style.display = 'block';
       } else {
         card.style.display = 'none';
