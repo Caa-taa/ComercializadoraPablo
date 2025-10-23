@@ -34,7 +34,8 @@
     <a href="#" class="logo">Cetermina</a>
     <ul>
       <li><a href="#" class="nav-link active-page" data-page="home">Inicio</a></li>
-      <li><a href="#" class="nav-link" data-page="products">Productos</a></li>
+      <li><a href="#" class="nav-link" data-page="products">Marcas</a></li>
+      <li><a href="#" class="nav-link" data-page="categories">Categorías</a></li>
     </ul>
   </nav>
 </header>
@@ -76,29 +77,86 @@
   </section>
 
   <!-- Página de Productos -->
-  <section id="products-page" class="page-content hidden">
-    <h1>Productos</h1>
+  <section id="categories-page" class="page-content hidden">
+    <h1>Categorías</h1>
+    <p>Selecciona una categoría para ver las marcas disponibles</p>
 
-    <div class="filter-section">
-      <h3>Filtrar por categoría:</h3>
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-category="all">Todos</button>
-        <button class="filter-btn" data-category="ropaTrabajo">Ropa de Trabajo</button>
-        <button class="filter-btn" data-category="ropaUrbana">Ropa urbana/administrativa/branding</button>
-        <button class="filter-btn" data-category="ropaSanidad">Ropa de sanidad</button>
-        <button class="filter-btn" data-category="calzadosSeguridad">Calzados de seguridad</button>
-        <button class="filter-btn" data-category="botasGomaPVC">Botas de goma y Zapatos de PVC</button>
-        <button class="filter-btn" data-category="proteccionPersonal">Elementos de proteccion personal</button>
-        <button class="filter-btn" data-category="embalaje">Embalaje</button>
-        <button class="filter-btn" data-category="pastas">Pastas</button>
-        <button class="filter-btn" data-category="merchandising">Merchandising</button>
-        <button class="filter-btn" data-category="cajasNavidad">Cajas de Navidad</button>
-        <button class="filter-btn" data-category="accesoriosBox">Accesorios de Box</button>
+    <div class="categories-grid">
+      <article class="category-card" data-category="ropaTrabajo">
+        <div class="category-icon"></div>
+        <h3>Ropa de Trabajo</h3>
+        <p>Indumentaria profesional para diversos rubros</p>
+      </article>
 
-      </div>
+      <article class="category-card" data-category="ropaUrbana">
+        <div class="category-icon"></div>
+        <h3>Ropa Urbana/Administrativa/Branding</h3>
+        <p>Vestimenta corporativa y urbana</p>
+      </article>
+
+      <article class="category-card" data-category="ropaSanidad">
+        <div class="category-icon"></div>
+        <h3>Ropa de Sanidad</h3>
+        <p>Indumentaria para el sector salud</p>
+      </article>
+
+      <article class="category-card" data-category="calzadosSeguridad">
+        <div class="category-icon"></div>
+        <h3>Calzados de Seguridad</h3>
+        <p>Protección para tus pies en el trabajo</p>
+      </article>
+
+      <article class="category-card" data-category="botasGomaPVC">
+        <div class="category-icon"></div>
+        <h3>Botas de Goma y Zapatos de PVC</h3>
+        <p>Calzado resistente al agua</p>
+      </article>
+
+      <article class="category-card" data-category="proteccionPersonal">
+        <div class="category-icon"></div>
+        <h3>Elementos de Protección Personal</h3>
+        <p>EPP para tu seguridad</p>
+      </article>
+
+      <article class="category-card" data-category="embalaje">
+        <div class="category-icon"></div>
+        <h3>Embalaje</h3>
+        <p>Soluciones para empaque y envío</p>
+      </article>
+
+      <article class="category-card" data-category="pastas">
+        <div class="category-icon"></div>
+        <h3>Pastas</h3>
+        <p>Productos alimenticios de calidad</p>
+      </article>
+
+      <article class="category-card" data-category="merchandising">
+        <div class="category-icon"></div>
+        <h3>Merchandising</h3>
+        <p>Artículos promocionales</p>
+      </article>
+
+      <article class="category-card" data-category="cajasNavidad">
+        <div class="category-icon"></div>
+        <h3>Cajas de Navidad</h3>
+        <p>Regalos corporativos navideños</p>
+      </article>
+
+      <article class="category-card" data-category="accesoriosBox">
+        <div class="category-icon"></div>
+        <h3>Accesorios de Box</h3>
+        <p>Equipamiento deportivo</p>
+      </article>
     </div>
+  </section>
+
+
+  <section id="products-page" class="page-content hidden">
+    <h1>Marcas</h1>
 
     <div class="products-grid" id="products-container">
+
+
       <!-- Pampero -->
       <article class="product-card" data-category="ropaTrabajo ropaUrbana ropaSanidad calzadosSeguridad botasGomaPVC">
         <img src="img/Pampero.jpg" alt="Pampero" class="product-image">
