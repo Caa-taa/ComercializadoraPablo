@@ -48,3 +48,17 @@ function filterProducts(category) {
     }
   });
 }
+
+// Click en el botón "Ver Todas las Marcas"
+document.querySelector('.all-brands-btn').addEventListener('click', function() {
+  // Cambiar a la página de productos
+  document.querySelectorAll('.page-content').forEach(page => page.classList.add('hidden'));
+  document.getElementById('products-page').classList.remove('hidden');
+
+  // Actualizar nav
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-page'));
+  document.querySelector('[data-page="products"]').classList.add('active-page');
+
+  // Mostrar todos los productos
+  filterProducts('all');
+});

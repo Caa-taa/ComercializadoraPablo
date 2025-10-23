@@ -235,3 +235,28 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+.all-brands-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.all-brands-btn {
+  background: #667eea;
+  color: white;
+  border: 2px solid #667eea;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.all-brands-btn:hover {
+  background: #5568d3;
+  border-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
