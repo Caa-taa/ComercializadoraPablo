@@ -27,10 +27,20 @@ nav {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo-img {
+  width: 45px;          /* tamaño del logo */
+  height: 45px;
+  border-radius: 50%;   /* lo hace redondeado */
+  object-fit: cover;    /* mantiene proporción */
+  margin-right: 10px;   /* separa la imagen del texto */
 }
 
 nav ul {
@@ -93,6 +103,143 @@ h1 {
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ==========================================
+   PHOTO GALLERY STYLES
+   ========================================== */
+
+.photo-gallery-section {
+  margin: 80px auto;
+  padding: 0 20px;
+  max-width: 1400px;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+/* Grid Masonry Layout */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
+  grid-auto-flow: dense;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-label {
+  transform: translateY(0);
+}
+
+/* Masonry effect - diferentes tamaños */
+.gallery-item-1 { grid-row: span 2; }
+.gallery-item-3 { grid-column: span 2; }
+.gallery-item-5 { grid-row: span 2; }
+.gallery-item-7 { grid-column: span 2; }
+.gallery-item-10 { grid-row: span 2; }
+.gallery-item-12 { grid-column: span 2; }
+.gallery-item-15 { grid-row: span 2; }
+.gallery-item-18 { grid-column: span 2; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+  }
+
+  .gallery-title {
+    font-size: 32px;
+  }
+
+  .gallery-subtitle {
+    font-size: 16px;
+  }
+
+  /* Simplificar el masonry en mobile */
+  .gallery-item-1,
+  .gallery-item-5,
+  .gallery-item-10,
+  .gallery-item-15 {
+    grid-row: span 1;
+  }
+
+  .gallery-item-3,
+  .gallery-item-7,
+  .gallery-item-12,
+  .gallery-item-18 {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .features {
@@ -259,4 +406,104 @@ footer {
   border-color: #5568d3;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ==========================================
+   FOOTER STYLES - MINIMALISTA NEGRO
+   ========================================== */
+
+.site-footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 30px 20px 15px;
+  margin-top: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Sección de Contacto */
+.footer-contact {
+  padding: 0;
+}
+
+.footer-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-item {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.contact-item:hover {
+  background: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333333;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+  color: #888888;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 25px 15px 12px;
+  }
+
+  .footer-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .contact-link {
+    font-size: 14px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+  }
 }

@@ -1,13 +1,25 @@
-y las categor[ias de producto ser[ian
+<div class="features">
+      <article class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Ejemplo 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </article>
 
-Ropa de Trabajo - Ombu, Pampero y Lhaka
-Ropa urbana/administrativa/branding - Ombu, Pampero, Lhaka, Bronx
-Ropa de sanidad - Pampero
-Calzados de seguridad - Ombu y Pampero
-Botas de goma y Zapatos de PVC - Ombu y Pampero
-Elementos de proteccion personal (EPP) - De Pascale
-Embalaje (Film stretch y Cintas de embalar) - Pkatz
-Pastas – Al Puro huevo
-Merchandising - Stanley
-Cajas de navidad --Z Arcor y Bagley
-Accesorios de Box - Bronx
+      <article class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Ejemplo 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Ejemplo 3</h3>
+        <p>Aut autem dicta omnis quaerat quo quod reprehenderit saepe sint sunt voluptatem.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Ejemplo 4</h3>
+        <p> Aperiam dolor dolore dolores explicabo ipsam omnis qui sed ut.</p>
+      </article>
+    </div>
