@@ -21,7 +21,6 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
 }
@@ -47,6 +46,7 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin-left: auto; /* <-- AÑADE ESTA LÍNEA */
 }
 
 nav a {
@@ -515,14 +515,15 @@ footer {
 
 /* 1. Estilo del botón de hamburguesa */
 #mobile-menu-button {
-  display: none; /* Oculto por defecto en escritorio */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
   flex-direction: column;
-  gap: 5px; /* Espacio entre las barras */
-  z-index: 1001; /* Asegura que esté sobre otros elementos */
+  gap: 5px;
+  z-index: 1001;
+  margin-left: auto; /* <-- AÑADE ESTA LÍNEA */
 }
 
 #mobile-menu-button .bar {
