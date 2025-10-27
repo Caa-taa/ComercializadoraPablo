@@ -507,3 +507,77 @@ footer {
     font-size: 10px;
   }
 }
+
+
+/* ==========================================
+   ESTILOS DEL MENÚ MÓVIL
+   ========================================== */
+
+/* 1. Estilo del botón de hamburguesa */
+#mobile-menu-button {
+  display: none; /* Oculto por defecto en escritorio */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px; /* Espacio entre las barras */
+  z-index: 1001; /* Asegura que esté sobre otros elementos */
+}
+
+#mobile-menu-button .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 2. Media Query para pantallas móviles */
+@media (max-width: 768px) {
+
+  nav {
+    /* Necesario para posicionar el menú desplegable */
+    position: relative;
+  }
+
+  /* 3. Ocultar la lista de enlaces original */
+  nav ul#nav-links {
+    display: none; /* Oculta por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  /* 4. Mostrar el menú cuando tiene la clase 'active' */
+  nav ul#nav-links.active {
+    display: flex;
+  }
+
+  nav ul#nav-links li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  /* 5. Mostrar el botón de hamburguesa */
+  #mobile-menu-button {
+    display: flex;
+  }
+}
+
+/* 6. (Opcional) Animación de "X" para el botón */
+#mobile-menu-button.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+#mobile-menu-button.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

@@ -100,3 +100,31 @@ if (ctaButton) {
     navigateTo(page, 'all');
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- Lógica del Menú Hamburguesa ---
+  const menuButton = document.getElementById('mobile-menu-button');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuButton && navLinks) {
+    // 1. Abrir/cerrar menú al hacer clic en el botón
+    menuButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuButton.classList.toggle('active'); // Para la animación de la "X"
+    });
+
+    // 2. Cerrar menú automáticamente al hacer clic en un enlace (para SPAs)
+    const links = navLinks.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuButton.classList.remove('active');
+      });
+    });
+  }
+
+  // --- Aquí iría el resto de tu lógica de app.js (si la tienes) ---
+  // Por ejemplo, el código que maneja el cambio de páginas.
+
+});
